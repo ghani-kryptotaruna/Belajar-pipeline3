@@ -9,6 +9,7 @@ pipeline {
         stage ('Halo') {
             steps {
                 echo('Hallo dek 1')
+                sleep(2)
                 echo('Hallo dek 2')
                 echo('Hallo dek 3')
             }
@@ -17,6 +18,7 @@ pipeline {
         stage ('Alpukat') {
             steps {
                 echo('Alpukat 1')
+                sleep(2)
                 echo('Alpukat 2')
                 echo('Alpukat 3')
             }
@@ -25,6 +27,7 @@ pipeline {
         stage ('Mangga') {
             steps {
                 echo ('Mangga 1')
+                sleep(2)
                 echo ('Mangga 2')
                 echo ('Mangga 3')
             }
@@ -33,6 +36,7 @@ pipeline {
         stage ('Durian') {
             steps {
                 echo('Durian 1')
+                sleep(2)
                 echo('Durian 2')
                 echo('Durian 3')
             }
