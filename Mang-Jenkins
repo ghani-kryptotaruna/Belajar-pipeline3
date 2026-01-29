@@ -1,6 +1,4 @@
 pipeline {
-    
-}
     agent {
         node {
             label "Fedora && Debian"
@@ -8,44 +6,50 @@ pipeline {
     }
     stages {
 
-        stage ('Hallo') {
+        stage ('Halo') {
             steps {
                 echo('Hallo dek 1')
-                sleps (3)
                 echo('Hallo dek 2')
                 echo('Hallo dek 3')
-            }
-        }
-        stage ('Mangga') {
-            steps {
-                echo('Mangga 1')
-                sleps (3)
-                echo('Mangga 2')
-                echo('Mangga 3')
             }
         }
 
         stage ('Alpukat') {
             steps {
                 echo('Alpukat 1')
-                sleps (3)
                 echo('Alpukat 2')
                 echo('Alpukat 3')
             }
         }
-        post {
-            always {
-                echo 'Aku akan selalu menyapa lagi!'
-            }
-            success {
-                echo 'Yes akhirnya success'
-            }
-            failure {
-                echo 'Oh tidak, gagal!'
-            }
-            cleanup {
-                echo 'Tidak peduli sukses atau gagal'
+
+        stage ('Mangga') {
+            steps {
+                echo ('Mangga 1')
+                echo ('Mangga 2')
+                echo ('Mangga 3')
             }
         }
 
+        stage ('Durian') {
+            steps {
+                echo('Durian 1')
+                echo('Durian 2')
+                echo('Durian 3')
+            }
+        }
     }
+    post {
+        always {
+            echo 'Saya akan selalu mengatakan, “Halo” lagi!'
+        }
+        success {
+            echo 'Hore, berhasil!'
+        }
+        failure {
+            echo 'Oh tidak, gagal!'
+        }
+        cleanup {
+            echo 'Tidak peduli berhasil atau gagal.'
+        }
+    }
+}
